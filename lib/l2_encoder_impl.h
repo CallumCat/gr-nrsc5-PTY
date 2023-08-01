@@ -57,7 +57,6 @@ private:
     int first_prog;
     int size;
     int data_bytes;
-    std::vector program_types;
     int payload_bytes;
     unsigned char rs_buf[255];
     void* rs_enc;
@@ -78,6 +77,7 @@ private:
     std::map<int, std::queue<unsigned char>> aas_queues;
     int aas_current_port;
     int aas_block_offset;
+    std::vector program_types;
 
     unsigned char* out_buf;
 
