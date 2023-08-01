@@ -57,7 +57,7 @@ private:
     int first_prog;
     int size;
     int data_bytes;
-    int<program_type> program_types
+    std::vector program_types;
     int payload_bytes;
     unsigned char rs_buf[255];
     void* rs_enc;
@@ -108,7 +108,7 @@ public:
                     const int first_prog,
                     const int size,
                     const int data_bytes = 0,
-                    const int<program_type> program_types = 0,);
+                    const std::vector program_types = {0},);
     ~l2_encoder_impl();
 
     // Where all the action really happens

@@ -26,7 +26,7 @@ l2_encoder::sptr l2_encoder::make(const int num_progs,
                                   const int first_prog,
                                   const int size,
                                   const int data_bytes,
-                                  const int<program_type> program_types = 0)
+                                  const std::vector program_types = {0})
 {
     return gnuradio::get_initial_sptr(
         new l2_encoder_impl(num_progs, first_prog, size, data_bytes, program_types));
@@ -40,7 +40,7 @@ l2_encoder_impl::l2_encoder_impl(const int num_progs,
                                  const int first_prog,
                                  const int size,
                                  const int data_bytes,
-                                 const int<program_type> program_types = 0)
+                                 const std::vector program_types = {0})
     : gr::block("l2_encoder",
                 gr::io_signature::make(2, 16, sizeof(unsigned char)),
                 gr::io_signature::make(1, 1, sizeof(unsigned char) * size))
