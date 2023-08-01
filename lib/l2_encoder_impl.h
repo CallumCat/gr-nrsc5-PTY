@@ -108,7 +108,7 @@ public:
                     const int first_prog,
                     const int size,
                     const int data_bytes = 0,
-                    const std::vector program_types = {0},);
+                    const std::vector program_types = {0});
     ~l2_encoder_impl();
 
     // Where all the action really happens
