@@ -41,6 +41,7 @@ void bind_l2_encoder(py::module& m)
            py::arg("first_prog"),
            py::arg("size"),
            py::arg("data_bytes") = 0,
+           py::arg("program_types") = {0},
            D(l2_encoder,make)
         )
         

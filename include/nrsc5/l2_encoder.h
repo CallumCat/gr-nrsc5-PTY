@@ -36,7 +36,7 @@ public:
                      const int first_prog,
                      const int size,
                      const int data_bytes = 0,
-                     const std::vector program_types = {0},);
+                     const std::vector program_types = {0});
 };
 
 } // namespace nrsc5
